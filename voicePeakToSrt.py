@@ -58,7 +58,7 @@ def write_srttime(srt: SrtInfo, filename: str) -> None:
 #end  : 終了秒数
 class ChrSingleTalk:
     def __init__(self,txtFile:str, wavFile:str, lastTalk:ChrSingleTalk):
-        txtFile_regex = r"(\d)+\-([^\-]+)\-.+" #ファイル名からキャラ名情報を取得
+        txtFile_regex = r"(\d+)\-([^\-]+)\-.+" #ファイル名からキャラ名情報を取得
         txtFileName = path.basename(txtFile)
         self.name = re.match(txtFile_regex,txtFileName).group(2)
         self.text = get_text(txtFile)
