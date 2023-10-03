@@ -7,6 +7,9 @@ import re
 from os import path
 from typing import List,Dict
 
+#一部のコードはこちらのサイトから転用しました
+#https://qiita.com/guneco/items/a5a9d59865062c7479d3
+
 def get_txt_files(folder: str) -> list:
     return sorted(glob.glob(f'{folder}/*.txt'))
 
