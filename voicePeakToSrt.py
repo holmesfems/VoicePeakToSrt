@@ -41,16 +41,6 @@ def calc_playtime(wav_file: str) -> float:
         return playtime
 
 
-def write_srttime(srt: SrtInfo, filename: str) -> None:
-    """SrtInfoを受け取ってSubRipファイルに必要な情報を順次加筆していく"""
-    with open(filename, mode='a') as f:
-        srt_items = [
-            str(srt.num)+'\n',
-            f'{srt.start} --> {srt.end}\n',
-            srt.text+'\n\n'
-            ]
-        f.writelines(srt_items)
-
 #セリフ一つを格納するクラス
 #name : キャラ名
 #text : セリフ本体
